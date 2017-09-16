@@ -25,7 +25,6 @@ function isNice(arr){
   })
   let count = 0;
 
-
   result.forEach((item) => {
       if(item === true){
           count++
@@ -46,18 +45,18 @@ console.log(isNice([ -2, 5, 0, 5, 12 ]))
 
 //THE BEST SOLUTION 
 
-function isNice(arr){
-  return !!arr.length && arr.every(x => arr.some(y => y === x - 1 ||  y === x + 1));
-}
+// function isNice(arr){
+//   return !!arr.length && arr.every(x => arr.some(y => y === x - 1 ||  y === x + 1));
+// }
 
 
 
-//BEST PRACTICE
-function isNice(arr){
-    var counter = 0
-    for(var i = 0; i < arr.length; i++) {
-        if (arr.includes(arr[i] - 1) || arr.includes(arr[i] + 1)) counter ++
-    }
-    if (counter == arr.length && arr.length != 0) return true
-    return false
-}
+// //BEST PRACTICE
+// function isNice(arr){
+//     var counter = 0
+//     for(var i = 0; i < arr.length; i++) {
+//         if (arr.includes(arr[i] - 1) || arr.includes(arr[i] + 1)) counter ++
+//     }
+//     if (counter == arr.length && arr.length != 0) return true
+//     return false
+// }
