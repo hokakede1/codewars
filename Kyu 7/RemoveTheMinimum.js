@@ -16,6 +16,8 @@
 // removeSmallest([5,3,2,1,4]) = [5,3,2,4]
 // removeSmallest([2,2,1,2,1]) = [2,2,2,1]
 
+// MY SOLUTION
+
 
 function removeSmallest(numbers) {
     if(numbers.length === 0){
