@@ -16,10 +16,34 @@
 
 function ensureEven(n) {
   // Code on squire...
-  
+  if(n < 1 && n > 0) {
+      return 0
+  } else if ( n > -1 && n < 0){
+      return 0
+  }
+  else if ( n >= 0 ) {
+      if(n % 2 === 0){
+          return parseInt(n)
+      }
+      else {
+          return parseInt(n + 1)
+      }
+  }
+  else if ( n <= 0){
+      if(n % 2 === 0){
+          return parseInt(n)
+      }
+      else {
+          return parseInt(n - 1)
+      }
+  }
 }
 
 console.log(ensureEven(1)) // 2
 console.log(ensureEven(0.5)) // 0
 console.log(ensureEven(-1)) // -2
 console.log(ensureEven(-0.5)) // 0
+
+
+// BEST SOLUTION :
+const ensureEven = n => Math.round(n/2) * 2 ;
