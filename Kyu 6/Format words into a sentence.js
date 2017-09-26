@@ -7,7 +7,7 @@
 
 function formatWords(words){
     
-  if(words === null){
+  if(!words){
     return ""  
   }
   var hello = words.filter(item => item !== '')
