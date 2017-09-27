@@ -6,22 +6,22 @@
 function solve(s){
  // covert to array
  var pharray = s.split("");
- console.log(pharray);
+ // an array of vowels
  var vowels = ['a','e','i','o','u'];
  var result = [];
  var instance = [];
  // map throu that array
  pharray.forEach((item,index,array) => {
      if(vowels.includes(item)){
+         // if the next item or the item before is vowel then push it into an array
+         // after that push it into another array
         if(vowels.includes(array[index + 1]) || vowels.includes(array[index - 1])){
-            console.log(item)
             instance.push(item)
         }
         else {
             result.push(instance)
             result.push([item])
             instance = []
-
         }
      } else {
             result.push(instance)
@@ -29,9 +29,6 @@ function solve(s){
         }
  })
 
- console.log(result)
- // if the next item or the item before is vowel then push it into an array
- // after that push it into another array
  // Loop throu the result array, find out the longest one and return the length of it
  var max = 0;   
  result.forEach((item) => {
@@ -45,7 +42,7 @@ function solve(s){
 // console.log(solve("codewarriors")); //2
 // console.log(solve("suoidea")); //3
 // console.log(solve("ultrarevolutionariees")); //3
-console.log(solve("strengthlessnesses")); //1
+// console.log(solve("strengthlessnesses")); //1
 // console.log(solve("cuboideonavicuare")); //2
 // console.log(solve("chrononhotonthuooaos")); //5
 // console.log(solve("iiihoovaeaaaoougjyaw")); //8

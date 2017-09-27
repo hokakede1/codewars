@@ -16,9 +16,9 @@ String.prototype.isAudio= function(){
     var count = 0;
     if(!fileName.includes(' ')){
         fileName.forEach((item) => {
-            console.log(item.match(".*[a-z].*"))
-            if(item.match(".*[a-z].*")){
+            if(item.match(/^[A-Za-z]+$/)){
                 truth = 1; 
+                console.log(item)
             }
             else{
                 fail = 999;
@@ -39,7 +39,6 @@ String.prototype.isAudio= function(){
   }
   }
  
-  
   return false
 };
 
@@ -59,9 +58,9 @@ String.prototype.isImage= function(){
     var count = 0;
     if(!fileName.includes(' ')){
         fileName.forEach((item) => {
-            console.log(item.match(".*[a-z].*"))
-            if(item.match(".*[a-z].*")){
+            if(item.match(/^[A-Za-z]+$/)){
                 truth = 1; 
+                console.log(item)
             }
             else{
                 fail = 999;
@@ -89,16 +88,28 @@ String.prototype.isImage= function(){
 
 
 
-//  console.log("Nothing Else Matters.mp3".isAudio()) //false
-//  console.log("NothingElseMatters.mp3".isAudio()) // true
-//  console.log("DaftPunk.FLAC".isAudio()) //false
-//  console.log("DaftPunk.flac".isAudio()) //true
-// console.log("AmonTobin.aac".isAudio()) //true
-//  console.log(" Amon Tobin.alac".isAudio())
-// console.log("tobin.alac".isAudio()) //true
-//  console.log("Home.jpg".isImage()) //true
-//  console.log("flat.jpeg".isImage()) //true
-//  console.log("icon.bmp".isImage()) //true
+ console.log("Nothing Else Matters.mp3".isAudio()) //false
+ console.log("NothingElseMatters.mp3".isAudio()) // true
+ console.log("DaftPunk.FLAC".isAudio()) //false
+ console.log("DaftPunk.flac".isAudio()) //true
+ console.log("AmonTobin.aac".isAudio()) //true
+  console.log(" Amon Tobin.alac".isAudio()) //false
+ console.log("tobin.alac".isAudio()) //true
+ console.log("Home.jpg".isImage()) //true
+ console.log("flat.jpeg".isImage()) //true
+ console.log("icon.bmp".isImage()) //true
  console.log("icon2.jpg".isImage()) //false
  console.log("bounce.gif".isImage()) //true
  console.log("animate bounce.GIF".isImage()) //false
+
+
+
+//SUPER SOLUTION
+
+String.prototype.isAudio = function() {
+  return /^[a-zA-Z]+\.(mp3|flac|al?ac)$/.test(this)
+}
+
+String.prototype.isImage = function() {
+  return /^[a-zA-Z]+\.(jpe?g|png|bmp|gif)$/.test(this)
+}
