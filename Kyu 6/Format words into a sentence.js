@@ -27,9 +27,9 @@ function formatWords(words){
   return result.join('')
 }
 
-// console.log(formatWords(['one','two','three']));
-// console.log(formatWords(['one','two','three','four']));
-// console.log(formatWords(['one','two']));
+console.log(formatWords(['one','two','three']));
+console.log(formatWords(['one','two','three','four']));
+console.log(formatWords(['one','two']));
 console.log(formatWords(['one','','three','four']));
 console.log(formatWords(['one','','','four']));
 console.log(formatWords([]));
