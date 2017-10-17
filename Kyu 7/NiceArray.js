@@ -12,19 +12,19 @@ function isNice(arr){
         return false
     }
 
-    
+
   const result = arr.map((item,index,arr) => {
       option1 = item + 1;
       option2 = item - 1;
-    
+
       if(arr.includes(option1)){
           return true
-      } 
+      }
       else if (arr.includes(option2)) { return true }
       else { return false }
   })
   let count = 0;
-
+ console.log(result)
   result.forEach((item) => {
       if(item === true){
           count++
@@ -43,11 +43,11 @@ function isNice(arr){
 console.log(isNice([ -2, 5, 0, 5, 12 ]))
 
 
-//THE BEST SOLUTION 
+//THE BEST SOLUTION
 
-// function isNice(arr){
-//   return !!arr.length && arr.every(x => arr.some(y => y === x - 1 ||  y === x + 1));
-// }
+  function isNice(arr){
+    return !!arr.length && arr.every(x => arr.some(y => y === x - 1 ||  y === x + 1));
+  }
 
 
 
