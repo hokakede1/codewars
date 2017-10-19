@@ -7,8 +7,10 @@
 function validParentheses(parens){
   // Split every char in the string into item in array
   var arr = parens.split('');
+  var first = arr.filter(item => item === '(').length === arr.filter(item => item === ')').length;
   // Seperate all item with "(" and ")" and compare the number if its the same
-  return arr.filter(item => item === '(').length === arr.filter(item => item === ')').length
+  var second = parens.charAt(0) === '(' && parens.charAt(arr.length - 1) === ')'
+  return first && second
 }
 
 
@@ -16,4 +18,4 @@ function validParentheses(parens){
 
   
 console.log(validParentheses( "()" )); //true
-console.log(validParentheses( "())" )); //false
+console.log(validParentheses( ")()()()(" )); //false
