@@ -13,8 +13,6 @@ function orderWeight(strng) {
         return a.value - b.value;
     });
     var listOfValues = indexs.map(item => item.value)
-    var
-    
 }
 
 
