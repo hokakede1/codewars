@@ -35,19 +35,17 @@ var emojiLib = {
 
 
   const insert = (string) => {
-    var arr = string.split(' ');
-    console.log(arr)
-    var result = arr.map(item => {
     
         for(var prop in emojiLib){
-            
-            item = item.replace(prop, emojiLib[prop])
+            for(i = true; i === true; null){
+            string = string.replace(prop, emojiLib[prop])
+            if(!string.includes(prop)){
+                i = false
+            }
         }
-
-    })
-    return result.join(' ')
+    }
+    return string
   }
-
 
 
 
@@ -62,6 +60,6 @@ var emojiLib = {
  
  
  
-//   console.log(insert('Well that was awkward [[f9.unimpressed]]...')) //, 'Well that was awkward :|...');
-//   console.log(insert('Let\'s go dancing! [[f9.dance1]][[f9.dance2]]')) //, 'Let\'s go dancing! <(^.^<)(>^.^)>')
-//   console.log(insert('OMG, he just sent me a pic of it [[f9.surprised]].')) //, 'OMG, he jus sen me a pic of it :O.')
+  console.log(insert('Well that was awkward [[f9.unimpressed]]...')) //, 'Well that was awkward :|...');
+  console.log(insert('Let\'s go dancing! [[f9.dance1]][[f9.dance2]]')) //, 'Let\'s go dancing! <(^.^<)(>^.^)>')
+  console.log(insert('OMG, he just sent me a pic of it [[f9.surprised]].')) //, 'OMG, he jus sen me a pic of it :O.')
