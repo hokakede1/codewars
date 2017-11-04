@@ -35,8 +35,17 @@ var emojiLib = {
 
 
   const insert = (string) => {
-    console.log(string)
-    console.log(goodOne.join(''))
+    var arr = string.split(' ');
+    console.log(arr)
+    var result = arr.map(item => {
+    
+        for(var prop in emojiLib){
+            
+            item = item.replace(prop, emojiLib[prop])
+        }
+
+    })
+    return result.join(' ')
   }
 
 
