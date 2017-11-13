@@ -22,6 +22,9 @@ function triangleSideGen(){
 
 }
 
+
+
+
  console.log(insert(1,2,3)) //, false);
   console.log(insert(1,3,5)) //, false);
   console.log(insert(2,4,6)) //, false);
